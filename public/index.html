@@ -2,31 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Replace the old favicon.ico link with this new SVG favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Background circle (optional, can be removed if a transparent background is preferred) --%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e0f2f7'/%3E%3C!-- Larger Drop shape --%3E%3Cpath d='M50,10 Q25,50 50,90 Q75,50 50,10 Z' fill='%2300b0ff'/%3E%3C!-- Larger Plus sign in the middle of the drop --%3E%3Crect x='42' y='47' width='16' height='4' fill='%23ffffff'/%3E%3Crect x='48' y='40' width='4' height='16' fill='%23ffffff'/%3E%3C/svg%3E" type="image/svg+xml">
+    <!-- This is a fallback for older browsers or if the primary link fails -->
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Background circle (optional, can be removed if a transparent background is preferred) --%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e0f2f7'/%3E%3C!-- Larger Drop shape --%3E%3Cpath d='M50,10 Q25,50 50,90 Q75,50 50,10 Z' fill='%2300b0ff'/%3E%3C!-- Larger Plus sign in the middle of the drop --%3E%3Crect x='42' y='47' width='16' height='4' fill='%23ffffff'/%3E%3Crect x='48' y='40' width='4' height='16' fill='%23ffffff'/%3E%3C/svg%3E" type="image/svg+xml">
+    <!-- Replace the old apple-touch-icon link with this new SVG favicon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Background circle (optional, can be removed if a transparent background is preferred) --%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e0f2f7'/%3E%3C!-- Larger Drop shape --%3E%3Cpath d='M50,10 Q25,50 50,90 Q75,50 50,10 Z' fill='%2300b0ff'/%3E%3C!-- Larger Plus sign in the middle of the drop --%3E%3Crect x='42' y='47' width='16' height='4' fill='%23ffffff'/%3E%3Crect x='48' y='40' width='4' height='16' fill='%23ffffff'/%3E%3C/svg%3E">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Insulin Dose Calculator" />
-    <!-- Favicon Links -->
-    <!-- Standard favicon for most browsers -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Background circle (optional, can be removed if a transparent background is preferred) --%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e0f2f7'/%3E%3C!-- Larger Drop shape --%3E%3Cpath d='M50,10 Q25,50 50,90 Q75,50 50,10 Z' fill='%2300b0ff'/%3E%3C!-- Larger Plus sign in the middle of the drop --%3E%3Crect x='42' y='47' width='16' height='4' fill='%23ffffff'/%3E%3Crect x='48' y='40' width='4' height='16' fill='%23ffffff'/%3E%3C/svg%3E" type="image/svg+xml">
-    <!-- For older browsers and specific contexts (e.g., Internet Explorer, desktop shortcuts) -->
-    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Background circle (optional, can be removed if a transparent background is preferred) --%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e0f2f7'/%3E%3C!-- Larger Drop shape --%3E%3Cpath d='M50,10 Q25,50 50,90 Q75,50 50,10 Z' fill='%2300b0ff'/%3E%3C!-- Larger Plus sign in the middle of the drop --%3E%3Crect x='42' y='47' width='16' height='4' fill='%23ffffff'/%3E%3Crect x='48' y='40' width='4' height='16' fill='%23ffffff'/%3E%3C/svg%3E" type="image/svg+xml">
-    <!-- For Apple touch icons (iOS home screen icons) -->
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C!-- Background circle (optional, can be removed if a transparent background is preferred) --%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e0f2f7'/%3E%3C!-- Larger Drop shape --%3E%3Cpath d='M50,10 Q25,50 50,90 Q75,50 50,10 Z' fill='%2300b0ff'/%3E%3C!-- Larger Plus sign in the middle of the drop --%3E%3Crect x='42' y='47' width='16' height='4' fill='%23ffffff'/%3E%3Crect x='48' y='40' width='4' height='16' fill='%23ffffff'/%3E%3C/svg%3E">
+    <!-- Update your description here -->
+    <meta name="description" content="Insulin Dose Calculator App" />
+
+    <!-- Remove or keep the manifest.json link if your app uses a web app manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Update your title here -->
     <title>Insulin Dose Calculator</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- The JavaScript bundles will be injected here during the build -->
   </body>
 </html>
