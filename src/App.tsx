@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import './App.css';
 
 const round = (num: number) => Math.round(num);
@@ -279,6 +280,7 @@ function App() {
             </div>
           )}
         </section>
+         <Analytics />
       </main>
       <footer className="footer">
         <span>{t.footer}</span>
