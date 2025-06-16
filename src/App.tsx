@@ -158,7 +158,7 @@ function App() {
         <form className="form-section" onSubmit={e => e.preventDefault()}>
           <label className="bg-label-row">
             <span className="bg-label-icon"><span role="img" aria-label="blood">🩸</span> {t.bgLabel}</span>
-            <input type="number" min="0" step="any" value={bg} onChange={e => setBg(e.target.value)} required className="bg-input" />
+            <input type="number" min="0" step="any" value={bg} onChange={e => setBg(e.target.value)} required className="bg-input" inputMode="numeric" pattern="[0-9]*" />
             <span className="unit-label">{t.bgUnit}</span>
           </label>
           <div className="carb-section">
@@ -175,6 +175,8 @@ function App() {
                   required
                   className="carb-input"
                   placeholder={t.carbCount}
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                 />
                 <span className="unit-label">{t.carbUnit}</span>
                 <div className="carb-helper">{t.carbHelper}</div>
@@ -198,6 +200,8 @@ function App() {
                   required
                   className="carb-input"
                   placeholder={t.carbGram}
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                 />
                 <span className="unit-label">{t.gramUnit}</span>
               </div>
@@ -217,7 +221,7 @@ function App() {
         <form className="form-section" style={{marginTop: 18}} onSubmit={e => e.preventDefault()}>
           <label className="tdd-label-row">
             <span className="bg-label-icon"><span role="img" aria-label="syringe">💉</span> {t.tdd}</span>
-            <input type="number" min="0" step="any" value={tdd} onChange={e => setTdd(e.target.value)} required className="tdd-input" />
+            <input type="number" min="0" step="any" value={tdd} onChange={e => setTdd(e.target.value)} required className="tdd-input" inputMode="numeric" pattern="[0-9]*" />
             <span className="unit-label">{t.units}</span>
           </label>
           {tddNum > 0 && (
@@ -227,12 +231,12 @@ function App() {
           )}
           <label className="basal-label-row">
             <span className="bg-label-icon"><span role="img" aria-label="syringe">💉</span> {t.basal}</span>
-            <input type="number" min="0" step="any" value={basal} onChange={e => setBasal(e.target.value)} required className="basal-input" />
+            <input type="number" min="0" step="any" value={basal} onChange={e => setBasal(e.target.value)} required className="basal-input" inputMode="numeric" pattern="[0-9]*" />
             <span className="unit-label">{t.units}</span>
           </label>
           <label className="target-label-row" style={{fontSize: 14, color: '#888', fontWeight: 400, marginTop: 2}}>
             <span className="bg-label-icon"><span role="img" aria-label="target">🎯</span> {t.targetBg}</span>
-            <input type="number" min="0" step="any" value={targetBg} onChange={e => setTargetBg(e.target.value)} required className="target-input" />
+            <input type="number" min="0" step="any" value={targetBg} onChange={e => setTargetBg(e.target.value)} required className="target-input" inputMode="numeric" pattern="[0-9]*" />
             <span className="unit-label">{t.bgUnit}</span>
           </label>
           <button type="button" onClick={handleRefresh} className="refresh-btn"><span role="img" aria-label="refresh">♻️</span> {t.refresh}</button>
